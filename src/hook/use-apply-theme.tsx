@@ -90,15 +90,12 @@ export function useApplyTheme() {
       );
       applyCustomColors(theme.customColors);
     } else {
-      console.log(`Aplicando tema ${theme.themeType} via CSS`);
       if (theme.themeType === "light") {
         root.classList.add(theme.themeType);
       } else {
         root.classList.add(theme.themeType);
       }
     }
-
-    console.log("Classes CSS após aplicação:", root.classList.toString());
   }, [theme]);
 
   return { theme, isPending };
